@@ -1,0 +1,7 @@
+# =======================================
+# Baseline RMSE (predicting 0)
+# =======================================
+y = train["forward_returns"].values
+baseline_preds = np.zeros_like(y)
+baseline_rmse = np.sqrt(mean_squared_error(y, baseline_preds))
+print(f"📉 Baseline RMSE: {baseline_rmse:.6f}")
